@@ -27,8 +27,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install 
-    - run: npm build
+    - run: npm run install 
+    - run: npm run build
     - name: Sync Files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with: 
