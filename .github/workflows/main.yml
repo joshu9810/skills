@@ -17,9 +17,18 @@ jobs:
   web-deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
     steps:
     - name: Get the latest code
     - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install 
+    - run: npm build
     - name: Sync Files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with: 
