@@ -250,11 +250,11 @@ textarea {
 
 #footer {
   background-color: var(--primary);
-  max-width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 #footer .footer-wrapper {
-  width: 100%;
+  width: 300px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
