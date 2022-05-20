@@ -254,7 +254,7 @@ textarea {
   margin: 0 auto;
 }
 #footer .footer-wrapper {
-  max-width: 300px;
+  width: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
