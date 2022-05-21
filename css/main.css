@@ -133,6 +133,12 @@ textarea {
   align-self: start;
 }
 
+#hero-banner .hero br {
+  display: none;
+}
+#hero-banner .skewed-bg{
+  display: none;
+}
 #hero-banner .image {
   width: 230px;
   height: 230px;
@@ -254,7 +260,7 @@ textarea {
   margin: 0 auto;
 }
 #footer .footer-wrapper {
-  width: 300px;
+  max-width: 300px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -269,11 +275,105 @@ textarea {
   background-color: var(--white);
   color: var(--primary);
 }
+@media only screen and (min-width: 810px){
+  .container {
+    max-width: 790px;
+  }
+  #hero-banner nav.top-navbar h2 {
+    font-size: 48px;
+  }
+
+  #hero-banner nav.top-navbar button {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+  #hero-banner .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-banner .wrapper .hero {
+    width: 50vh;
+    padding-right: 25px;
+  }
+
+  #hero-banner .hero br {
+    display: block;
+  }
+#hero-banner .hero h1 {
+  font-size: 38px;
+}
+  #hero-banner .hero p {
+    font-size: 16px;
+  }
+
+  #hero-banner .wrapper .image {
+    width: 50vh;
+    height: 400px;
+    border-radius: 150px;
+    z-index: 1000;
+    padding-top: 100px;
+  }
+  #hero-banner .wrapper{
+    position: relative;
+  }
+  #hero-banner .wrapper .skewed-bg {
+    display: block;
+    background-image: linear-gradient(var(--primary), var(--light));
+    width: 25vh;
+    height: 600px;
+    position: absolute;
+    right: -200px;
+    top: -95px;
+    border-bottom-right-radius: 15px;
+    transform: rotate(45deg);
+  }
+
+  #hero-banner .image .members {
+    width: 120px;
+    height: 110px;
+    top: -5px;
+    right: -45px;
+  }
+
+  #hero-banner .image .courses {
+    width: 180px;
+    height: 110px;
+    bottom: -45px;
+  }
+
+  #hero-banner .image .boxes {
+    font-weight: bold;
+  }
+
+  #features {
+    margin-top: 50px;
+  }
+
+  #features .feature-heading, .feature {
+    width: 300px;
+    height: 200px;
+  }
+
+  #features .feature-heading h3 {
+    font-size: 28px;
+  }
+
+  #features .feature-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+  }
+
+  #footer .footer-wrapper {
+    max-width: 100%;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 .container {
-  max-width: 300px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
